@@ -24,7 +24,7 @@ If [available in Hex](https://hex.pm/docs/publish), the package can be installed
 
 # Why Weaver ?
 For an invariable language like Elixir, composing objects together can always be a pain.
-Consider export a object with all the images it has, and all the images that its associated objects have, like this:
+Consider export an object with all the images it has, and all the images that its associated objects have, like this:
 ```
 Listing:
   cover: Image
@@ -35,7 +35,7 @@ House:
 User:
   avatar: Image
 ```
-Getting all the images directly or indirectly associated to the `Listing` object is painful. Not to mention, we have to cram them back to the appropriate position.
+Getting all the images directly or indirectly associated with the `Listing` object is painful. Not to mention, we have to cram them back to the appropriate position.
 
 The `Weaver` comes to help, to
 * Do topological sorting bases on the dependencies between objects, to determine the most efficient way to fetch objects with different types (at compile time, Woo! Yeah! no performance penalty!)
@@ -45,7 +45,7 @@ The `Weaver` comes to help, to
 
 # Usage
 
-Basically the weaver system composes by two parts:
+Basically, the weaver system composes by two parts:
   1. Providers, which accept several ids and return a Map mapping from the id to corresponding object(s)
   2. Weavers, which define how to weave objects provided by providers into the targeting object
 
